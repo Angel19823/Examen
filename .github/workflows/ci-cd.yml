@@ -11,7 +11,8 @@ jobs:
       - run: npm ci
       - run: npm test || true
 
-  deploy:
+  build-test:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
